@@ -1,0 +1,84 @@
+name: Crawl (Test)
+
+on:
+  schedule:
+    - cron: "0 2 * * 5"  # Every Friday at 2 AM UTC
+  workflow_dispatch:       # Manual trigger from GitHub UI
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      - name: Run crawler
+        env:
+          USE_CLASSIFIER: ${{ vars.USE_CLASSIFIER || 'false' }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python main.py
+
+      - name: Commit output, memory and feeds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/jobs.json memory/job_ids.csv docs/ parameters/quellen.csv
+          git diff --staged --quiet || git commit -m "chore: crawl $(date -u '+%Y-%m-%d')"
+          git push
+
+      - name: Push feeds to public feeds repo
+        env:
+          FEEDS_DEPLOY_KEY: ${{ secrets.FEEDS_DEPLOY_KEY }}
+        run: |
+          # Set up SSH key for the public feeds repo
+          mkdir -p ~/.ssh
+          echo "$FEEDS_DEPLOY_KEY" > ~/.ssh/feeds_deploy_key
+          chmod 600 ~/.ssh/feeds_deploy_key
+          cat >> ~/.ssh/config << 'SSHEOF'
+          Host feeds-repo
+            HostName github.com
+            User git
+            IdentityFile ~/.ssh/feeds_deploy_key
+            StrictHostKeyChecking no
+          SSHEOF
+
+          # Clone the public feeds repo
+          git clone git@feeds-repo:Sw3azy/Arbeitsplatzsuche-43-feeds.git /tmp/feeds-repo
+
+          # Copy feed files
+          cp docs/feed-*.xml /tmp/feeds-repo/
+          cp docs/feeds.html /tmp/feeds-repo/
+
+          # Commit and push
+          cd /tmp/feeds-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "feeds: update $(date -u '+%Y-%m-%d')"
+          git push
+
+      - name: Show results summary
+        run: |
+          echo "=== Crawl complete ==="
+          python -c "
+          import json
+          with open('output/jobs.json') as f:
+              data = json.load(f)
+          print(f'Total jobs: {data[\"total_jobs\"]}')
+          for cat in data['categories']:
+              print(f'  {cat[\"name\"]}: {len(cat[\"jobs\"])} jobs')
+          "
