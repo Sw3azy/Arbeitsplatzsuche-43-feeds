@@ -5,24 +5,7 @@
   <subtitle>Wöchentlich aktualisierte Stellenangebote für Politikwissenschaft, Soziologie und verwandte Bereiche</subtitle>
   <link href="https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-thinktank.xml" rel="self" type="application/atom+xml"/>
   <link href="https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feeds.html" rel="alternate" type="text/html"/>
-  <updated>2026-06-19T07:22:43.461422+00:00</updated>
+  <updated>2026-06-26T06:25:25.219652+00:00</updated>
   <generator>Arbeitsplatzsuche-43</generator>
-  <entry>
-    <id>https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-thinktank.xml#e5fabd3e56dce504</id>
-    <title>Sachbearbeiter*in im Studienwerk</title>
-    <link href="https://www.rosalux.de/ausschreibung/id/54924/sachbearbeiterin-im-studienwerk-1" rel="alternate" type="text/html"/>
-    <updated>2026-06-19T07:13:01Z</updated>
-    <author><name>Rosa-Luxemburg-Stiftung</name></author>
-    <summary>Institution: Rosa-Luxemburg-Stiftung · Kategorie: Foundation / Think Tank</summary>
-    <category term="Foundation / Think Tank"/>
-  </entry>
-  <entry>
-    <id>https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-thinktank.xml#8cefc06d2447d029</id>
-    <title>Leiter*in Auslandsbüro in Beirut, Libanon</title>
-    <link href="https://www.rosalux.de/ausschreibung/id/54912/leiterin-auslandsbuero-in-beirut-libanon" rel="alternate" type="text/html"/>
-    <updated>2026-06-19T07:13:01Z</updated>
-    <author><name>Rosa-Luxemburg-Stiftung</name></author>
-    <summary>Institution: Rosa-Luxemburg-Stiftung · Kategorie: Foundation / Think Tank</summary>
-    <category term="Foundation / Think Tank"/>
-  </entry>
+
 </feed>
