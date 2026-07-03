@@ -5,15 +5,33 @@
   <subtitle>Wöchentlich aktualisierte Stellenangebote für Politikwissenschaft, Soziologie und verwandte Bereiche</subtitle>
   <link href="https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-government.xml" rel="self" type="application/atom+xml"/>
   <link href="https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feeds.html" rel="alternate" type="text/html"/>
-  <updated>2026-06-26T06:25:25.219652+00:00</updated>
+  <updated>2026-07-03T06:07:59.001251+00:00</updated>
   <generator>Arbeitsplatzsuche-43</generator>
   <entry>
-    <id>https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-government.xml#483fcf9c8cb6214e</id>
-    <title>University of Minnesota - Twin Cities - Associate Director</title>
-    <link href="https://networks.h-net.org/jobs/70089/university-minnesota-twin-cities-associate-director" rel="alternate" type="text/html"/>
-    <updated>2026-06-26T06:23:51Z</updated>
-    <author><name>H-Net Job Guide</name></author>
-    <summary>Institution: H-Net Job Guide · Kategorie: Government / Public Sector · Ort: Twin Cities</summary>
+    <id>https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-government.xml#5b8827cf64fc9f07</id>
+    <title>Liaison Officer</title>
+    <link href="https://careers.icrc.org/job/Port-Sudan-%28PSU%29-Liaison-Officer-32355/1393332233/" rel="alternate" type="text/html"/>
+    <updated>2026-07-03T05:54:32Z</updated>
+    <author><name>ICRC Careers</name></author>
+    <summary>Institution: ICRC Careers · Kategorie: International Organization</summary>
+    <category term="International Organization"/>
+  </entry>
+  <entry>
+    <id>https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-government.xml#e34464c1600cd823</id>
+    <title>Mental Health and Psychosocial Support Delegate</title>
+    <link href="https://careers.icrc.org/job/Geneva-%28GVA%29-Mental-Health-and-Psychosocial-Support-Delegate-30794/1400378133/" rel="alternate" type="text/html"/>
+    <updated>2026-07-03T05:54:32Z</updated>
+    <author><name>ICRC Careers</name></author>
+    <summary>Institution: ICRC Careers · Kategorie: International Organization</summary>
+    <category term="International Organization"/>
+  </entry>
+  <entry>
+    <id>https://cdn.jsdelivr.net/gh/Sw3azy/Arbeitsplatzsuche-43@main/docs/feed-government.xml#8f0d41955c01e6bf</id>
+    <title>Programmleitung Syrien für das Auslandsbüro in Beirut, Libanon</title>
+    <link href="https://www.rosalux.de/ausschreibung/id/54970/programmleitung-syrien-fuer-das-auslandsbuero-in-beirut-libanon" rel="alternate" type="text/html"/>
+    <updated>2026-07-03T05:59:15Z</updated>
+    <author><name>Rosa-Luxemburg-Stiftung</name></author>
+    <summary>Institution: Rosa-Luxemburg-Stiftung · Kategorie: Government / Public Sector · Ort: Beirut, Libanon</summary>
     <category term="Government / Public Sector"/>
   </entry>
 </feed>
